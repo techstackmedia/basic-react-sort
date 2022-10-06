@@ -3,10 +3,11 @@ import StateContexts from "./context/StageContexts";
 
 const UseStageContexts = () => {
   const { state, fetchAPI } = useContext(StateContexts);
+  const [sortItems, setSortItems] = useState([]);
+
   useEffect(() => {
     fetchAPI();
-  }, []);
-  const [sortItems, setSortItems] = useState([]);
+  }, [sortItems]);
 
   let sortNames = [...state];
   const handleClick = () => {
