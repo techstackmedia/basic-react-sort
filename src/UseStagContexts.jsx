@@ -6,7 +6,7 @@ const UseStageContexts = () => {
   const [sortItems, setSortItems] = useState([]);
   useEffect(() => {
     fetchAPI();
-  }, [fetchAPI, sortItems]);
+  }, []);
 
   let sortNames = [...state];
   const handleClick = () => {
